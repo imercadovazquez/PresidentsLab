@@ -9,6 +9,6 @@ for item in rsp_data:
     print("item: ", item)
     print("value:", rsp_data[item])
     pres_list = rsp_data[item]
-print("\n*****************************************************************\n")
+print("\n*********************************************************************************\n")
 for x in rsp_data['RelatedTopics']:
     print("entries: ", x)
