@@ -1,6 +1,17 @@
 import pytest
 import requests
 
+@pytest.mark.parametrize("pres", ['Washington', 'Adams', 'Jefferson', 'Madison',
+                                  'Monroe', 'Adams', 'Jackson', 'Buren', 'Harrison',
+                                  'Tyler', 'Polk', 'Taylor', 'Fillmore', 'Pierce',
+                                  'Buchanan', 'Lincoln', 'Johnson', 'Grant', 'Hayes',
+                                  'Garfield', 'Arthur','Cleveland', 'Harrison',
+                                  'Cleveland', 'McKinley', 'Roosevelt', 'Taft', 'Wilson',
+                                  'Harding', 'Coolidge', 'Hoover', 'Roosevelt', 'Truman',
+                                  'Eisenhower','Kennedy', 'Johnson', 'Nixon', 'Ford',
+                                  'Carter', 'Reagan', 'Bush', 'Clinton','Bush',
+                                  'Obama', 'Trump'])
+
 
 url_ddg = "https://api.duckduckgo.com/?q=presidents of the united states&format=json&pretty=1"
 
@@ -8,12 +19,11 @@ url_ddg = "https://api.duckduckgo.com/?q=presidents of the united states&format=
 def test_ddg0():
     resp = requests.get(url_ddg)
     rsp_data = resp.json()
+    a = False
     for item in rsp_data['RelatedTopics']:
         if "Lincoln" in item['Text']:
             a = True
             return
-        else:
-            a = False
     assert a == True
 
 
