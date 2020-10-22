@@ -100,7 +100,15 @@ def test_ddg7(president):
     assert a == True
 
 
-@pytest.mark.parametrize("president", ['Bush', 'Clinton', 'Obama', 'Trump'])
+@pytest.mark.parametrize("president", ['Washington', 'Adams', 'Jefferson', 'Madison',
+                                  'Monroe', 'Jackson', 'Buren', 'Harrison',
+                                  'Tyler', 'Polk', 'Taylor', 'Fillmore', 'Pierce',
+                                  'Buchanan', 'Lincoln', 'Johnson', 'Grant', 'Hayes',
+                                  'Garfield', 'Arthur','Cleveland', 'McKinley', 'Roosevelt',
+                                  'Taft', 'Wilson', 'Harding', 'Coolidge', 'Hoover',
+                                  'Roosevelt', 'Truman', 'Eisenhower','Kennedy', 'Nixon',
+                                  'Ford', 'Carter', 'Reagan', 'Bush', 'Clinton', 'Obama',
+                                  'Trump'])
 def test_ddg8(president):
     resp = requests.get(url_ddg)
     rsp_data = resp.json()
