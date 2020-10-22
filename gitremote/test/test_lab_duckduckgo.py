@@ -20,12 +20,11 @@ def test_ddg0():
 def test_ddg1(president):
     resp = requests.get(url_ddg)
     rsp_data = resp.json()
+    a = False
     for item in rsp_data['RelatedTopics']:
         if president in item['Text']:
             a = True
-            return
-        else:
-            a = False
+            return            
     assert a == True
 
 
@@ -33,12 +32,11 @@ def test_ddg1(president):
 def test_ddg2(president):
     resp = requests.get(url_ddg)
     rsp_data = resp.json()
+    a = False
     for item in rsp_data['RelatedTopics']:
         if president in item['Text']:
             a = True
-            return
-        else:
-            a = False
+            return            
     assert a == True
 
 
@@ -46,12 +44,11 @@ def test_ddg2(president):
 def test_ddg3(president):
     resp = requests.get(url_ddg)
     rsp_data = resp.json()
+    a = False
     for item in rsp_data['RelatedTopics']:
         if president in item['Text']:
             a = True
-            return
-        else:
-            a = False
+            return            
     assert a == True
 
 
@@ -59,12 +56,11 @@ def test_ddg3(president):
 def test_ddg4(president):
     resp = requests.get(url_ddg)
     rsp_data = resp.json()
+    a = False
     for item in rsp_data['RelatedTopics']:
         if president in item['Text']:
             a = True
-            return
-        else:
-            a = False
+            return            
     assert a == True
 
 
@@ -72,12 +68,11 @@ def test_ddg4(president):
 def test_ddg5(president):
     resp = requests.get(url_ddg)
     rsp_data = resp.json()
+    a = False
     for item in rsp_data['RelatedTopics']:
         if president in item['Text']:
             a = True
-            return
-        else:
-            a = False
+            return            
     assert a == True
 
 
@@ -85,12 +80,11 @@ def test_ddg5(president):
 def test_ddg6(president):
     resp = requests.get(url_ddg)
     rsp_data = resp.json()
+    a = False
     for item in rsp_data['RelatedTopics']:
         if president in item['Text']:
             a = True
-            return
-        else:
-            a = False
+            return            
     assert a == True
 
 
@@ -98,12 +92,11 @@ def test_ddg6(president):
 def test_ddg7(president):
     resp = requests.get(url_ddg)
     rsp_data = resp.json()
+    a = False
     for item in rsp_data['RelatedTopics']:
         if president in item['Text']:
             a = True
-            return
-        else:
-            a = False
+            return            
     assert a == True
 
 
@@ -111,12 +104,11 @@ def test_ddg7(president):
 def test_ddg8(president):
     resp = requests.get(url_ddg)
     rsp_data = resp.json()
+    a = False
     for item in rsp_data['RelatedTopics']:
         if president in item['Text']:
             a = True
-            return
-        else:
-            a = False
+            return            
     assert a == True
 
 
